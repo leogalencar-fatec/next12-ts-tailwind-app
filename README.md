@@ -38,6 +38,43 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 ---
 
+## 🐳 Docker Setup
+
+This project includes a **Dockerized development and production environment** using **Docker** and **Docker Compose**.
+
+### 📂 Docker Files Overview
+
+- **`Dockerfile`** – Defines the Next.js build, development, and production environments.
+- **`compose.yaml`** – Docker Compose configuration to run the app as a containerized service.
+- **`.dockerignore`** – Specifies files and directories to exclude from the build context.
+
+---
+
+### 🏗️ Building and Running the Container
+
+#### 🔹 Development Mode
+To run the application in **development mode** with live reloading:
+
+```bash
+docker compose up -d --build
+```
+
+This starts the **Next.js development server** inside a container. The source code is **mounted** as a volume, so changes will reflect without rebuilding the image.
+
+#### 🔹 Production Mode
+For a **production-ready** container:
+
+1. Build the optimized production image:
+   ```bash
+   docker build -t nextjs-app --target production .
+   ```
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 nextjs-app
+   ```
+
+---
+
 ## 📂 Project Structure
 ```markdown
 next12_ts_tailwind_app_template/
