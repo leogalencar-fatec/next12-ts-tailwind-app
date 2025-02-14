@@ -1,0 +1,33 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+      dockerfile: Dockerfile
+    container_name: nextjs_container
+    environment:
+      - ENV_KEY=${ENV_KEY}
+    ports:
+      - "0.0.0.0:3000:3000"
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+
+      # Use isolated volumes for storing sys link files
+      # - type: volume
+      #   source: node_modules
+      #   target: /app/node_modules
+      # - type: volume
+      #   source: next_data
+      #   target: /app/.next
+
+    # Make next app depend on another service
+    # depends_on:
+    #   - your_service_name
+    # links:
+    #   - "your_service_name"
+
+# volumes:
+  # node_modules:
+  # next_data:
