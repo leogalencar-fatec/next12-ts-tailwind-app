@@ -18,6 +18,58 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Folder Structure
+```markdown
+cnpj_brazil_consulta/
+├── db/                             # Database related stuff
+│   └── dumps/                      # Database dumps
+├── prisma/                         # Prisma configuration files
+│   ├── schema.prisma               # Prisma schema
+│   └── migrations/                 # Prisma migration files
+├── public/                         # Public assets folder
+│   ├── images/                     # Images folder
+│   └── favicon.ico                 # App icon
+├── src/                            # Source app folder
+│   ├── api/                        # Custom API utilities (optional)
+│   ├── components/                 # Reusable UI components
+│   │   ├── common/                 # Generic components (e.g., Button, Input)
+│   │   ├── layout/                 # Layout components (e.g., Header, Footer)
+│   │   └── {pages}/                # Pages-specific components
+│   ├── constants/                  # Constants
+│   ├── hooks/                      # Custom React hooks
+│   ├── lib/                        # Utility functions and libraries
+│   │   ├── prisma.ts               # Prisma client instance
+│   │   └── utils.ts                # General utilities
+│   ├── pages/                      # Next.js pages and API routes
+│   │   ├── api/                    # API routes
+│   │   │   ├── {pages}/            # Pages-related API routes
+│   │   │   │   ├── [id].ts         # Dynamic API route for a identified entity
+│   │   │   │   └── index.ts        # API route for a entity
+│   │   │   └── auth/               # Authentication-related API routes (optional)
+│   │   ├── _app.tsx                # Custom App component
+│   │   ├── index.tsx               # Home page
+│   │   └── {pages}/                # Pages-related pages
+│   │       ├── [id].tsx            # Dynamic page for a identified entity
+│   │       └── index.tsx           # Entity index page
+│   ├── styles/                     # Global and module-specific styles
+│   │   ├── globals.css             # Global styles
+│   │   └── tailwind.css            # TailwindCSS entry point
+│   ├── types/                      # Custom TypeScript types
+│   ├── utils/                      # Additional utilities (optional)
+│   └── middleware.ts               # Middleware configuration file (routes protection)
+├── .dockerignore                   # Docker ignore file
+├── .eslintrc.json                  # eslint
+├── .gitignore                      # gitignore
+├── compose.yaml                    # Docker compose file
+├── Dockerfile                      # Dockerfile
+├── next.config.js                  # Next configuration
+├── package.json                    # Dependencies
+├── postcss.config.js               # PostCSS configuration
+├── README.md                       # Docs
+├── tailwind.config.js              # TailwindCSS configuration
+└── tsconfig.json                   # TypeScript configuration
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
