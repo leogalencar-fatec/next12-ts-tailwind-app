@@ -1,8 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 12 TypeScript & TailwindCSS Template
 
-## Getting Started
+This is a [Next.js 12](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-First, run the development server:
+## 📌 Overview
+
+This is a **Next.js 12 starter template** pre-configured with:
+- **TypeScript** ✅
+- **TailwindCSS** ✅
+
+⚠️ **Note:** This template does **not** include Prisma or additional dependencies—it's meant to be a minimal starting point.
+
+---
+
+## 🚀 Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,17 +30,17 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the running app.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Editing & Development
+- You can start modifying `src/pages/index.tsx` to see real-time changes.
+- [API routes](https://nextjs.org/docs/api-routes/introduction) are available under `src/api/*`. An example API endpoint is located in `src/pages/api/pageApiExample/index.ts`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Folder Structure
+## 📂 Project Structure
 ```markdown
-cnpj_brazil_consulta/
+next12_ts_tailwind_app_template/
 ├── db/                             # Database related stuff
 │   └── dumps/                      # Database dumps
 ├── prisma/                         # Prisma configuration files
@@ -70,17 +90,20 @@ cnpj_brazil_consulta/
 └── tsconfig.json                   # TypeScript configuration
 ```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Learn More
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To dive deeper into Next.js, check out:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 📖 [Next.js Documentation](https://nextjs.org/docs) – Learn about features and API.
+- 🎓 [Next.js Interactive Tutorial](https://nextjs.org/learn) – Hands-on learning experience.
+- 💻 [Next.js GitHub Repository](https://github.com/vercel/next.js) – Contribute or explore.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deploy on Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The easiest way to deploy your Next.js app is via [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), the creators of Next.js.
+
+For detailed deployment steps, visit the official [Next.js deployment docs](https://nextjs.org/docs/deployment).
